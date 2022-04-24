@@ -31,31 +31,19 @@
      (at_kitchen_content content3)
      (at_kitchen_content content4)
      (at_kitchen_content content5)
-
      
      (no_gluten_bread bread1)
      (no_gluten_bread bread2)
      (vegan_bread bread3)
-
-
-
-
      (no_gluten_content content1)
      (no_gluten_content content2)
      (vegan_content content2)
-
-
-
-
-
      (allergic_gluten child1)
      (allergic_gluten child2)
-     (not_allergic_gluten child3)
-     (not_allergic_gluten child4)
-     (not_allergic_gluten child5)
+     (not_vegan_allergic_gluten child3)
+     (not_vegan_allergic_gluten child4)
+     (not_vegan_allergic_gluten child5)
      (vegan child6)
-
-
      
      (waiting child2 table1)
      (waiting child1 table1)
@@ -63,17 +51,12 @@
      (waiting child4 table2)
      (waiting child5 table4)
      (waiting child6 table3)
-
-
-
      (notexist sandw1)
      (notexist sandw2)
      (notexist sandw3)
      (notexist sandw4)
      (notexist sandw5)
      (notexist sandw6)
-
-
   )
   (:goal
     (and

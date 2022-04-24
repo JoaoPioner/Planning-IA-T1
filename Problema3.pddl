@@ -41,7 +41,7 @@
      (no_gluten_content content1)
      (no_gluten_content content3)
      (allergic_gluten child1)
-     (not_allergic_gluten child2)
+     (not_vegan_allergic_gluten child2)
      (not_allergic_gluten child3)
      (allergic_gluten child4)
      (allergic_gluten child5)

@@ -21,7 +21,7 @@
      (no_gluten_bread bread1)
      (no_gluten_content content2)
      (allergic_gluten child1)
-     (not_allergic_gluten child2)
+     (not_vegan_allergic_gluten child2)
      (waiting child2 table1)
      (waiting child1 table1)
      (notexist sandw1)

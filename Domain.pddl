@@ -19,7 +19,7 @@
 
 
 (define (domain child-snack)
-(:requirements :typing :equality :disjunctive-preconditions)
+(:requirements :typing :equality :disjunctive-preconditions :negative-preconditions)
 (:types child bread-portion content-portion sandwich tray place)
 (:constants kitchen - place)
 
@@ -39,7 +39,6 @@
 	     (allergic_gluten ?c - child)
      	     (not_allergic_gluten ?c - child)
 		 (vegan ?c - child)
-		 	 (not_vegan ?c - child)
 		 (vegan_allergic_gluten ?c - child)
 		 	 (not_vegan_allergic_gluten ?c - child)
 	     (served ?c - child)
@@ -136,7 +135,8 @@
 (:action serve_sandwich_vegan
  	:parameters (?s - sandwich ?c - child ?t - tray ?p - place)
 	:precondition (and
-		       (vegan ?c)
+		       
+			   (vegan ?c)
 		       (ontray ?s ?t)
 		       (waiting ?c ?p)
 		       (vegan_sandwich ?s)
@@ -160,8 +160,10 @@
 
 (:action serve_sandwich
 	:parameters (?s - sandwich ?c - child ?t - tray ?p - place)
-	:precondition (and (not_allergic_gluten ?c)
-	                   (waiting ?c ?p)
+	:precondition (and (not_vegan_allergic_gluten ?c)
+					   (not (vegan ?c))
+					   (not (allergic_gluten ?c))
+					   (waiting ?c ?p)
 			   (ontray ?s ?t)
 			   (at ?t ?p))
 	:effect (and (not (ontray ?s ?t))

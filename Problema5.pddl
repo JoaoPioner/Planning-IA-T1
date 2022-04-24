@@ -17,7 +17,7 @@
      (vegan_bread bread1)
      (vegan_content content2)
      (vegan child1)
-     (not_allergic_gluten child2)
+     (not_vegan_allergic_gluten child2)
      (waiting child2 table1)
      (waiting child1 table1)
      (notexist sandw1)
